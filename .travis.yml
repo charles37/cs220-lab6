@@ -4,7 +4,7 @@ hello:build:
         - make -C lab6/hello clean all
     only:
         - master
-	
+
 hello:test:
     stage: test
     script:
