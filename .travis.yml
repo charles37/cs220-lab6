@@ -4,16 +4,10 @@ hello:build:
         - make -C lab6/hello clean all
     only:
         - master
-    artifacts:
-        expire_in: 1 hour
-        paths:
-            - hello/hello
-
+	
 hello:test:
     stage: test
     script:
-        - hello/hello
+        - Make -C hello clean tests
     only:
         - master
-    dependencies:
-        - hello:build
